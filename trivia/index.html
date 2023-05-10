@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+                function Answer_checker(clicked_id){
+                    if (clicked_id === "incorrect1" ||clicked_id === "incorrect2" || clicked_id === "incorrect3" ){
+                        document.getElementById(clicked_id).style.backgroundColor = 'Red';
+                        document.querySelector('#confirm1').innerHTML = 'Incorrect!';
+                    }
+
+                    if (clicked_id === "correct"){
+                        document.getElementById(clicked_id).style.backgroundColor = 'Green';
+                        document.querySelector('#confirm1').innerHTML = 'Correct!';
+                    }
+                }
+            window.addEventListener("load", function () {
+
+
+                document.querySelector('#check').addEventListener('click',function () {
+                    let input = document.querySelector('input');
+                    if (input.value === 'Abacus') {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#confirm2').innerHTML = 'Correct!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#confirm2').innerHTML = 'Incorrect';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    Which country is also known as the 'Land of thousand Lakes'?
+                </h3>
+                <button type = "button" id = "incorrect1" onclick = "Answer_checker(this.id)" >Angola</button>
+                <button type = "button" id = "correct" onclick = "Answer_checker(this.id)" >Finland</button>
+                <button type = "button" id = "incorrect2" onclick = "Answer_checker(this.id)" >Denmark</button>
+                <button type = "button" id = "incorrect3"onclick = "Answer_checker(this.id)" >Croatia</button>
+                <p id="confirm1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>
+                    Which is the first calculating device ?
+                </h3>
+                <input type="text"></input>
+                <button id="check">Check</button>
+                <p id="confirm2"></p>
+            </div>
+        </div>
+    </body>
+</html>

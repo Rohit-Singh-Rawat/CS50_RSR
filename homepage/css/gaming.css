@@ -1,0 +1,346 @@
+
+@font-face{
+    font-family: customfont;
+    src: url("files/Sports World-Regular.otf");
+}
+body {
+    background-color: black;
+    background-repeat : no-repeat;
+    top: 15px;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    overflow-x: hidden;
+  }
+.headtop {
+    text-align: center;
+    position:relative;
+    top:-20px;
+    font-family: 'customfont', sans-serif;
+    color: white;
+    transition: all .5s ease;
+    font-size: 30px;
+    background: none;
+
+}
+.nav{
+    z-index: 200;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top: -250px;
+    background-color: #333333;
+    background: linear-gradient(to left, rgba(51,51,51,1) 0%,rgba(255,255,255,0) 69%);
+    transition: all 0.5s ease   ;
+}
+
+.nav a{
+    color : white;
+    height: 100%;
+    width: 100%;
+    font-size : 20px;
+    position:relative;
+    left: 150px;
+    top :20px;
+    padding-left : 100px;
+    display: inline;
+    transition: .4s;
+
+}
+.nav-links-container a span{
+    margin-right: 2px;
+}
+#check{
+    display: none;
+}
+label #nav-open, label #nav-close{
+    position: absolute;
+    cursor: pointer;
+    background: #333333;
+    border-radius: 3px;
+}
+label #nav-open{
+    position: fixed;
+    z-index: 2222;
+    right: 100px;
+    top: 15px;
+    font-size: 25px;
+    color: white;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+label #nav-close{
+    position: fixed;
+    z-index: 1111;
+    right: -100px;
+    top: -100px;
+    font-size: 25px;
+    color: white;
+    padding: 4px 9px;
+    background: linear-gradient(to left, rgba(51,51,51,1) 0%,rgba(255,255,255,0) 69%);
+    transition: all .5s ease;
+
+}
+#check:checked ~ .nav{
+    top : 0px;
+
+}
+#check:checked ~ label #nav-open{
+
+    top: 100px;
+    opacity : 0;
+    pointer-events : none;
+
+}
+#check:checked ~ .headtop{
+    bottom: 80px;
+    opacity : 0;
+    color: black;
+}
+#check:checked ~ label #nav-close{
+    right: 100px;
+    top: 17px;
+
+}
+
+
+.Imagez img{
+    height: 30vh;
+    width: 25vw;
+    position: relative;
+    left: 59%;
+    bottom: 40vh;
+    z-index:-100;
+}
+h1{
+    color: white;
+    font-weight: 700;
+    font-size:25px;
+    letter-spacing: .04rem;
+    margin-block-start: 0.83em;
+    margin-block-end:0.2em;
+    padding-left: 40px;
+    padding-bottom: 13px;
+}
+.gamez{
+    color: white;
+    text-decoration: none;
+    padding-left: 60px;
+    font-size :14px;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+#games h3{
+    padding-left: 40px;
+    margin-block-end: 0.83em;
+    color: #07f5b9;
+    font-size: 19px;
+
+}
+.card {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 280px;
+    grid-template-rows: 150px 1fr ;
+    grid-template-areas: "image" "text" ;
+    border-radius: 18px;
+    background: black;
+    box-shadow: 5px 5px 15px rgba(255,255,255,0.5);
+    text-align: center;
+    size:fixed;
+  }
+.card-image{
+    grid-area: image;
+    background-size: cover;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+
+}
+
+.card-text {
+    grid-area: text;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px;
+    color: grey;
+
+}
+  .rol-cos{
+
+    background-image: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("files/card--image/Roller-Coaster-Tycoon.jpg")
+  }
+  .human{
+
+    background-image: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("files/card--image/Human-Resource-Machine.jpg")
+  }
+  .Minecraft{
+
+    background-image: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("files/card--image/Minecraft.jpg")
+  }
+  .Factoria{
+
+    background-image: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("files/card--image/Factoria.jpg")
+  }
+  .gta{
+
+    background-image: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("files/card--image/GTA-v.jpg")
+  }
+  .CoC{
+
+    background-image: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("files/card--image/CoC.jpg")
+  }
+  .Bitburner{
+
+    background-image: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("files/card--image/Bitburner.jpg")
+  }
+  .Frostpunk{
+
+    background-image: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("files/card--image/Frostpunk.jpg")
+  }
+  .Farcry{
+
+    background-image: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("files/card--image/Farcry.jpg")
+  }
+  .Gladiabots{
+
+    background-image: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("files/card--image/Gladiabots.jpg")
+  }
+
+#card-collection{
+  display: flex;
+  position: relative;
+  bottom: 500px;
+  left: 60vw;
+  align-items: centre;
+  z-index: 40;
+}
+.card-text h3{
+  margin-top: 0px;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+
+.rgb::after {
+  content:"";
+  background: linear-gradient(45deg,
+  #ff0000 0%,
+  #ff9a00 10%,
+  #d0de21 20%,
+  #4fdc4a 30%,
+  #3fdad8 40%,
+  #2fc9e2 50%,
+  #1c7fee 60%,
+  #5f15f2 70%,
+  #ba0cf8 80%,
+  #fb07d9 90%,
+  #ff0000 100%  )
+  repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: -3px;
+  border-radius: 16px;
+  filter: blur(8px);
+  z-index: -20;
+  animation: rgb 6s linear infinite;
+}
+@keyframes rgb {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+.game-elem{
+    margin: auto;
+    background-color: yellow;
+    height: 20px;
+    width: 2.5px;
+    border-radius: 25px;
+    margin-top: 3px;
+    left: 40px;
+    position: absolute;
+
+}
+
+.gamez:hover{
+    font-weight: bold;
+    font-size:20px;
+    color: green;
+}
+#card-collection{
+    visibility: hidden;
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+}
+    100%{
+        opacity: 1;
+    }
+
+
+@keyframes fadeout{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#cr{
+    font-size: 12px;
+    color: white;
+    position : absolute;
+    top: 8vh;
+    right: 10vh;
+
+}
+.contact-logo{
+    height: 100%;
+    margin-left: 20px;
+    padding-left: 50px;
+    position: relative;
+    top: 15px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+
+
+}
+#connect-me{
+    background-color: #333333;
+    width : 100%;
+    height : 12vh;
+    position : relative;
+    top: 0px;
+    margin:0;
+    padding-bottom: 20px;
+
+}
+
+#info{
+  color: yellow;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Century Gothic, serif;
+  position: absolute;
+  bottom: 10vh;
+  left: 27vw;
+}
+
+#before{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  left: -30px;
+}
+#after{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  left: 43.2vw;
+  top: -2px;
+}

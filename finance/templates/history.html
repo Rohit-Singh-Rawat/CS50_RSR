@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table>
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Transacted</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for transition in transitions %}
+            <tr>
+                <td>{{transition["symbol"]}}</td>
+                <td>{{transition["shares"]}}</td>
+                <td>${{transition["price"]}}</td>
+                <td>{{transition["Transacted"]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
